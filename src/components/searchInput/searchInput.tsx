@@ -18,8 +18,8 @@ function SearchInput(): JSX.Element {
     const handleSerachQuery = (e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)
 
     return (
-        <div>
-            <input type="text" onChange={handleSerachQuery} />
+        <div className='w-1/2'>
+            <input className='rounded-sm p-2 w-full h-10 outline-0' type="text" onChange={handleSerachQuery} />
         </div>
     )
 }

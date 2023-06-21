@@ -1,25 +1,20 @@
 import SearchInput from '../../components/searchInput/searchInput'
-import { useAppSelector } from '../../store/hook'
+import TitleText from '../../components/titleText/titleText'
+import List from '../list/list'
 
 function SearchBook() {
 
-    const { data, isLoading, Error } = useAppSelector((state: any) => state.SearchReducer)
 
 
 
     return (
-        <div className='flex justify-center '>
+        <div className='flex items-center w-full mt-60 flex-col'>
+            <TitleText text="Search Books" size="text-xl" color="text-[#fbfbf6]" />
             <SearchInput />
-            {data?.items?.map((item: any) =>
-                <div key={item.id}>
-                    <p>{item.volumeInfo.title}</p>
-                </div>
-            )}
-            {
-                isLoading && <p>loading...</p>
-            }
+            <List />
         </div>
     )
 }
 
 export default SearchBook
+
