@@ -9,7 +9,7 @@ function List() {
         < div className={`w-1/2 ${data?.length !== 0 && "bg-white"} mt-1 p-2 rounded-sm`} >
             {
                 data?.items?.slice(0, 5)?.map((item: any) =>
-                    <ItemInList data={item} />
+                    <ItemInList data={item} key={item.id} />
                 )
             }
             {
