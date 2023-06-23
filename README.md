@@ -8,6 +8,7 @@ and a reading list to check out your books.
 
 no extra feature,
 not using any specific pre-built component for styling.
+i used vite beacause it's superfast and cra is not recommanded anymore base on react new docs.
 ## Tech Stack
 
 **Client:** React, Redux-saga, TailwindCSS, axios, vite
@@ -18,6 +19,9 @@ not using any specific pre-built component for styling.
 ## Installation
 
 Install my-project with yarn
+it runs on http://localhost:5173/ 
+you have to type address in browser,
+it doesn't open a tab in browser automatically like CRA.
 
 ```bash
   yarn or yarn install
