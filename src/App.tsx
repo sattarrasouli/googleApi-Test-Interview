@@ -1,18 +1,21 @@
 import { Route, Routes } from 'react-router-dom'
-import SearchBook from './views/search/SerachBook'
-import CustomRouter from './utils/CustomRouter'
+import Layout from './components/layout/layout'
 import { history } from './store/store'
-import Mainpage from './views/mainpage/mainpage'
+import CustomRouter from './utils/CustomRouter'
+import ReadingList from './views/readingList/readingList'
+import SearchBook from './views/search/SearchBook'
 
 function App() {
 
   return (
     <div>
       <CustomRouter history={history}>
-        <Routes >
-          <Route path='/' element={<Mainpage />} />
-          <Route path='/readingList' element={<Mainpage />} />
-        </Routes>
+        <Layout>
+          <Routes >
+            <Route path='/' element={<SearchBook />} />
+            <Route path='/readingList' element={<ReadingList />} />
+          </Routes>
+        </Layout>
       </CustomRouter>
     </div>
   )

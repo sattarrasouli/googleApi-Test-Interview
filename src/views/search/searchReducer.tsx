@@ -1,15 +1,9 @@
 import * as types from "../../store/types"
-
-interface IState {
-    Error: boolean,
-    data: string[],
-    isLoading: boolean
-}
-
-interface IAction {
-    type: string,
-    payload: string | string[]
-}
+import { IAction, IState } from "../../utils/interfaces"
+/**
+ * search reducer to handle data base on action.
+ * declare initial state and its type
+ */
 const initialState: IState = {
     data: [],
     Error: false,

@@ -1,13 +1,11 @@
-import { History } from "history";
-import React, { ReactNode } from "react";
+import React from "react";
 import { Router } from "react-router-dom";
-
-interface ICustomRouter {
-    basename?: string,
-    children: ReactNode,
-    history: History
-}
-
+import { ICustomRouter } from "./interfaces";
+/**
+ *  private route for authorization and authorized user in project.
+ * @param param0 base route , children (jsx element) , history 
+ * @returns a specific route 
+ */
 const CustomRouter =
     ({
         basename,

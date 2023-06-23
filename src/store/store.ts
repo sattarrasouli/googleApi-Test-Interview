@@ -3,7 +3,11 @@ import { createBrowserHistory, History } from 'history';
 import createSagaMiddleware from 'redux-saga';
 import { rootReducer } from './reducers';
 import rootSaga from './saga';
-
+/**
+ * creating redux store using configure store in reduxjs/toolkit(redux best practice specially in typescript)
+ * and history to connect router to react components.
+ * saga middleware for handling async action. 
+ */
 declare global {
     interface Window {
         __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
